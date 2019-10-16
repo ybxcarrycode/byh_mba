@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:src="@drawable/unread_count_bg" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="标题卡德罗夫浪费"
+        android:textColor="@color/tv_find_nearterm_title_item"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_name_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:text="一条回复"
+        android:textColor="@color/text_light_001"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:text="12.25"
+        android:textColor="@color/text_light_001"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

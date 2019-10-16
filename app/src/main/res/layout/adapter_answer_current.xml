@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="@color/white3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="解析"
+        android:textColor="#646A6D"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/line_login_view_questoion" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textColor="#646A6D"
+            android:text="正确答案是: " />
+
+        <TextView
+            android:id="@+id/tv_current_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:gravity="center_vertical"
+            android:textColor="#0091EA"
+            android:text="A" />
+
+        <TextView
+            android:id="@+id/tv_user_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textColor="#646A6D"
+            android:text="你的答案是 B" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_offer_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:textColor="#646A6D"
+        android:textSize="@dimen/text_size_15"
+        android:lineSpacingExtra="2dp"
+        android:text="        电视剧付款了对方机卡分离更好立即获得法律感慨绝地反击风格化结婚的发过来快点不就行对方离开更好舰队司令快回家对付两个看见好地方各家各户剪短发更好的交流风格化打两份工很凉快地方" />
+
+</LinearLayout>

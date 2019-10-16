@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <SurfaceView
+        android:layout_weight="1"
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+
+    </com.xszj.mba.view.GlobalTitleView>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_start"
+            android:text="开始"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/button_stop"
+            android:text="结束"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />、
+
+
+        <Spinner
+            android:id="@+id/spinner_size"
+            android:text="结束"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+
+        <TextView
+            android:id="@+id/textView_time"
+            android:text="结束"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+include ':umeng_community_wb_library_project', 'uikit', ':xrecyclerview', ':polyvAndroidSDKGif1.0'
+include ':app'

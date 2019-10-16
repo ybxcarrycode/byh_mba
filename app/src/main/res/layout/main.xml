@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/skin_global_bg">
+
+    <com.net.nim.demo.common.ui.viewpager.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pager_sliding_tab_strip_height"
+        android:layout_below="@id/app_bar_layout"
+        android:background="@drawable/skin_global_bg"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabs"/>
+
+    <com.netease.nim.uikit.common.ui.drop.DropCover
+        android:id="@+id/unread_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/welcome_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+</RelativeLayout>

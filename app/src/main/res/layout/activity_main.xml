@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_all"
+    android:baselineAligned="false">
+
+    <!-- 主界面的布局 -->
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xszj.mba.view.NoTouchViewPager
+                android:id="@+id/main_tab_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#b1b1b1"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/main_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_scriptures"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_scriptures"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawableTop="@drawable/tab_scriptures"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="2dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="fitXY"
+                        android:text="考圈"
+                        android:textColor="@color/main_botton_text_color"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_introduction"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_introduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawableTop="@drawable/tab_introduction"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="2dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="咨询"
+                        android:textColor="@color/main_botton_text_color"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_common"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@null"
+                        android:drawableTop="@drawable/tab_together"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="2dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="主页"
+                        android:textColor="@color/main_botton_text_color"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view001"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true"></View>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_homework"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_homework"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawableTop="@drawable/tab_operation"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="2dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="发现"
+                        android:textColor="@color/main_botton_text_color"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_apply_class"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_apply_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawableTop="@drawable/tab_apply_class"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="2dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="我的"
+                        android:textColor="@color/main_botton_text_color"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

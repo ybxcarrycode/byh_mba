@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_all"
+    android:orientation="vertical"
+    >
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+
+    </com.xszj.mba.view.GlobalTitleView>
+
+    <ScrollView
+        android:id="@+id/_sl_proto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/_txv_protocol_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:textSize="12sp" />
+    </ScrollView>
+
+</LinearLayout>

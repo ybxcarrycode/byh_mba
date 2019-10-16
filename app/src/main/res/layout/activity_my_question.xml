@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_title_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <com.xszj.mba.view.NormalEmptyView
+        android:id="@+id/fmobile_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/ed_text"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/box_search_head"
+            android:drawableLeft="@mipmap/icon_allbook_shaixuan_search"
+            android:drawablePadding="10dp"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:maxLength="28"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColorHint="#b3b5b5"
+            android:textSize="13sp" />
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecyclerview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+</LinearLayout>

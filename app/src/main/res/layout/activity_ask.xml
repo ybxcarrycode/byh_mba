@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_title_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+
+    </com.xszj.mba.view.GlobalTitleView>
+
+    <RelativeLayout
+        android:background="#f8f8f8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ask_title_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/ask_title_icon" />
+
+        <TextView
+            android:id="@+id/ask_content_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ask_title_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="输入你的问题，很快会有答案哦！"
+            android:textColor="@color/blue_bg"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ask_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ask_content_iv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fillet_white_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/spinnerb_sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/select_iv"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="话题:选择你感兴趣的话"
+                    android:textColor="@color/c999999" />
+
+                <ImageView
+                    android:id="@+id/select_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/home_open_down" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="4dp"
+                android:background="#e9e9e9" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <EditText
+                    android:id="@+id/contentEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white"
+                    android:gravity="left|top"
+                    android:hint="内容:输入你想提的问题"
+                    android:padding="5dp"
+                    android:textColor="@color/c999999"
+                    android:textSize="14sp" />
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_90dp"
+                    android:id="@+id/pic_list"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:horizontalSpacing="6dp"
+                    android:layout_marginRight="5dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="6dp"
+                    >
+                </GridView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ask_layout"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/photo_upload_bg" />
+
+
+        <TextView
+            android:id="@+id/ask_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/blue_bg"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="提问"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

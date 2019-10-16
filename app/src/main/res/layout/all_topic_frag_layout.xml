@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+
+    </com.xszj.mba.view.GlobalTitleView>
+
+    <LinearLayout
+        android:layout_below="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.xszj.mba.view.NormalEmptyView
+            android:id="@+id/fmobile_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.xszj.mba.view.PullToRefreshView
+            android:id="@+id/all_topic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/all_topic_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </ListView>
+        </com.xszj.mba.view.PullToRefreshView>
+    </LinearLayout>
+
+</RelativeLayout>

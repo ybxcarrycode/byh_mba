@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="101dp"
+    android:paddingLeft="14dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="18dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_we_write" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="8dp"
+        android:background="@color/line_find" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/imageView"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="标题"
+        android:textColor="@color/tv_find_nearterm_title_item"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_course_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="37dp"
+        android:layout_toRightOf="@id/imageView"
+        android:drawableLeft="@mipmap/icon_course_list_time"
+        android:drawablePadding="7dp"
+        android:text="name  time"
+        android:textColor="@color/tv_course_list_item_class"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_course_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="61dp"
+        android:layout_toRightOf="@id/imageView"
+        android:drawableLeft="@mipmap/icon_course_list_class"
+        android:drawablePadding="7dp"
+        android:text="name  time"
+        android:textColor="@color/tv_course_list_item_class"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

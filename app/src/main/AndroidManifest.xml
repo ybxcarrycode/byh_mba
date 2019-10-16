@@ -1,0 +1,1223 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xszj.mba">
+
+
+    <!-- 短信验证 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- 使用相机 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!-- 推送相关的权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+
+    <!-- 加入应用需要的权限 -->
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 手机状态 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 读写文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- SDK权限申明, 第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
+    <!-- 和下面的uses-permission一起加入到你的AndroidManifest文件中。 -->
+    <permission
+        android:name="com.xszj.mba.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+
+    <!-- 接受SDK消息广播权限， 第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
+    <uses-permission android:name="com.xszj.mba.permission.RECEIVE_MSG" />
+
+
+    <application
+        android:name="com.net.nim.demo.NimApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/UmengDefault">
+
+
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="ce934d4bb4a054045b3e7487bb3196c1" />
+
+        <!-- <activity
+             android:name="WelcomeActivity"
+             android:configChanges="keyboardHidden|orientation"
+             android:hardwareAccelerated="true"
+             android:label="@string/app_name"
+             android:launchMode="singleTop"
+             android:screenOrientation="portrait"
+             android:theme="@style/WelcomeEntranceActionBarTheme"
+             android:windowSoftInputMode="adjustPan">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+             </intent-filter>
+         </activity>-->
+        <activity
+            android:name="com.xszj.mba.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.SplashActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.TestActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.ImageShowActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name="com.xszj.mba.drawingBoard.DrawingTestActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.xszj.mba.drawingBoard.DrawingSecondActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.SignInActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.NewsTextActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>    
+        
+        <activity
+            android:name="com.xszj.mba.activity.QuestionErrorListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>  
+        
+        <activity
+            android:name="com.xszj.mba.activity.OnlyQuestionErrorListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.ForgetPasswordActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/UmengDefault"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.easefun.polyvsdk.demo.download.PolyvDownloadListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/UmengDefault"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.GuideActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.LoginNewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.MediaRecorderDemoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name="com.xszj.mba.activity.SchoolDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+        <activity
+            android:name="com.xszj.mba.activity.FoucsBbsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.CourseListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.BbsDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.SttDeatilActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.PerfectUserInfoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.AboutOurActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.FeedbackActivty"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.LawActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.PerfectNameSignActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.personImage.CropImageActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.SysPushMessageActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.LearnRateActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.FollowTeacherActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.CollectActity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.PerfectDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/xs_dialog"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.MyQuestionActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.MyAnswerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.EvaluteTeacherActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.NewsWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.HomeWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.SetingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.EvaluateDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.RecommendVedioPlayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.OpenClassVedioLivePlayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.OpenClassLivingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.MessageActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.xszj.mba.activity.SchoolListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.AskActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+        <activity
+            android:name="com.xszj.mba.activity.QuestionBankActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+        <activity
+            android:name="com.xszj.mba.activity.QuestionDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+        <activity
+            android:name="com.xszj.mba.activity.QuestionResultActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+        <activity
+            android:name="com.xszj.mba.activity.QuestionHistoryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+
+        <activity
+            android:name="com.xszj.mba.activity.HobiessSelectActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.easefun.polyvsdk.demo.IjkVideoActicity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+        <!-- 短信验证 -->
+        <!--<activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <data android:scheme="tencent1104512898" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 视频演示主类 -->
+        <activity
+            android:name="com.easefun.polyvsdk.live.activity.PolyvPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="PlayerActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.easefun.polyvsdk.demo.upload.PolyvULNotificationService"></service>
+
+        <activity
+            android:name="com.easefun.polyvsdk.demo.upload.PolyvUploadListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <!-- 暴风结束 -->
+
+
+        <!-- =====友盟社区    开始   ======================================================================= -->
+
+        <!-- 微博版activity组件 start -->
+        <activity
+            android:name="com.umeng.comm.ui.activities.FindActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.TopicDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--话题-->
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.FeedsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 搜索结果Activity -->
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.RelativeUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.umeng.community.login.DefaultLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name="com.umeng.community.login.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.PostFeedActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <!--topic picker-->
+        <!--<activity-->
+        <!--android:name="com.umeng.comm.ui.activities.TopicPickActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:windowSoftInputMode="stateHidden|adjustResize" />-->
+        <!-- forward-->
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.ForwardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 搜索Activity -->
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.SearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- searchtopic -->
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.SearchTopicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.FeedDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name="com.umeng.comm.ui.activities.GuideActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- feed详情页面 -->
+
+
+        <!-- 设置页面activity -->
+        <activity android:name="com.umeng.common.ui.activities.SettingActivity" />
+
+
+        <activity
+            android:name="com.umeng.common.ui.activities.LoginSimplifyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name="com.umeng.common.ui.activities.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <!-- 友盟登录界面 -->
+        <activity android:name="com.umeng.community.login.LoginActivity" />
+
+        <activity android:name="com.umeng.comm.ui.activities.LocationFeedActivity" />
+        <!-- ##################分享相关#################### -->
+        <!-- 分享内容编辑页 -->
+
+        <activity
+            android:name="com.xszj.mba.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <activity android:name="com.umeng.common.ui.activities.AlbumActivity" />
+
+
+        <activity android:name="com.umeng.comm.ui.activities.FollowedTopicActivity" />
+
+        <activity android:name="com.umeng.comm.ui.activities.NotificationActivity" />
+
+        <activity android:name="com.umeng.comm.ui.activities.NewMsgActivity" />
+
+        <!-- 图片选择相关 -->
+
+        <activity android:name="com.umeng.common.ui.imagepicker.PhotoSelectorActivity" />
+        <activity android:name="com.umeng.common.ui.imagepicker.PhotoPreviewActivity" />
+        <activity
+            android:name="com.umeng.common.ui.activities.MessageChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--<activity-->
+        <!--android:name=".WBShareActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation"-->
+        <!--android:screenOrientation="portrait" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />-->
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity
+            android:name="com.umeng.common.ui.activities.BrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+
+        <!-- ##################### 推送相关 ##################### -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false"></receiver>
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.umeng.community.example.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="com.umeng.community.example.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.community.example.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+        <!-- If you donot want to use the standard notification bar in SDK, you can define IntentService instead to handle message. -->
+        <service
+            android:name="com.umeng.message.UmengDownloadResourceService"
+            android:exported="false" />
+        <service
+            android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+
+
+        <!-- 友盟App Key, 必须替换为您在友盟官网上申请到的. -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="581adcbc734be44ca80023cc"></meta-data>
+        <!-- 友盟的App secret -->
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="9ee66a86097707f0f5cd0a72d9573c22"></meta-data>
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="557e18d1afb32a69351be5abc7f1cd25" />
+
+
+        <!-- =======友盟社区    结束   ============================================================================= -->
+
+        <!-- 支付宝-->
+
+        <activity
+            android:name="com.alipay.sdk.pay.demo.PayDemoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!--网易云信   -->
+
+        <!-- 多端登录管理 -->
+        <activity
+            android:name="com.net.nim.demo.main.activity.MultiportActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!-- 关于 -->
+        <activity
+            android:name="com.net.nim.demo.main.activity.AboutActivity"
+            android:configChanges="orientation"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.SettingsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.NoDisturbActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.contact.activity.AddFriendActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.contact.activity.UserProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.contact.activity.UserProfileSettingActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.contact.activity.UserProfileEditItemActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.contact.activity.BlackListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 文件管理器 -->
+        <activity
+            android:name="com.net.nim.demo.file.browser.FileBrowserActivity"
+            android:configChanges="orientation"
+            android:label="@string/file_browser"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.SystemMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.net.nim.demo.main.activity.CustomNotificationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.net.nim.demo.session.activity.MessageHistoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.net.nim.demo.session.activity.MessageInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.net.nim.demo.team.activity.AdvancedTeamSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.net.nim.demo.team.activity.AdvancedTeamJoinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.TeamListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 全局搜索 -->
+        <activity
+            android:name="com.net.nim.demo.main.activity.GlobalSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="stateUnspecified"></activity>
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.GlobalSearchDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name="com.net.nim.demo.main.activity.GlobalSearchDetailActivity2"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 查看阅后即焚 -->
+        <activity
+            android:name="com.net.nim.demo.session.activity.WatchSnapChatPictureActivity"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- 音视频 -->
+        <activity
+            android:name="com.net.nim.demo.avchat.activity.AVChatActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+        <!-- 消息历史搜索 -->
+        <activity
+            android:name="com.net.nim.demo.session.search.SearchMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+
+        <activity
+            android:name="com.net.nim.demo.session.search.DisplayMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 声明云信后台服务 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core" />
+
+        <!-- 运行后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core" />
+
+        <!-- 声明云信后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.job.NIMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+
+        <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录 -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
+
+        <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
+        <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
+        <receiver
+            android:name="com.net.nim.demo.receiver.CustomNotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.netease.nim.demo.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- 申明本地电话状态（通话状态）的广播接收器，第三方APP集成时音视频模块时，如果需要网络通话与本地电话互斥，请加上此接收器 -->
+        <!--<receiver android:name="com.netease.nimlib.receiver.IncomingCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>-->
+
+        <!-- cosine -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine"></service>
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine"></receiver>
+
+        <!-- cosine target SDK integrated -->
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value="" />
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver" />
+
+        <!-- 您从百度网站获取的APP KEY，根据实际您的APP申请的APP_KEY进行修改 -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="j96yX2aGrFc93eCtcQ7o774L0AhQLWn5" /> <!-- abcd1234 -->
+
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+
+
+    </application>
+
+</manifest>

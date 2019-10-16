@@ -1,0 +1,291 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
+        <item name="colorAccent">@color/color_green_89fbff</item>
+        <item name="actionBarSize">@dimen/action_bar_height</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="ProgressHUD" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="PlayerTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:itemTextAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTheme</item>
+    </style>
+
+    <!-- navigation style -->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <!-- toolbar的弹出菜单 -->
+    <style name="ActionMenuTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/color_black_333333</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 登录主题 -->
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/color_blue_3a9efb</item>
+        <item name="colorPrimaryDark">@color/color_blue_3a9efb</item>
+        <item name="colorAccent">@color/color_blue_0888ff</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowBackground">@color/color_blue_3a9efb</item>
+    </style>
+
+    <!-- 全屏主题 -->
+    <style name="FullScreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 欢迎界面主题 -->
+    <style name="WelcomeEntranceActionBarTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <!-- 搜索界面主题 -->
+    <style name="global_search_bg" parent="@style/AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/global_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="CustomProgressStyle100dip" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:minWidth">100dip</item>
+        <item name="android:maxWidth">100dip</item>
+        <item name="android:minHeight">100dip</item>
+        <item name="android:maxHeight">100dip</item>
+    </style>
+
+    <style name="xs_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="EmptyTextStyle">
+        <item name="android:textColor">@color/empty_txt_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 标题 白色 18sp 字体 -->
+    <style name="title_tv_white_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 标题 白色 20sp 字体 -->
+    <style name="title_tv_white_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- 发现模块导航栏样式 -->
+    <style name="radio_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/content_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/rb_find_sel_item</item>
+    </style>
+    <!-- 发现模块第二级选项导航栏样式 -->
+    <style name="find_second_radio_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/find_rb_second_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!-- 寻师详情页 状态栏横条 tv 统一样式-->
+    <style name="stt_detail_state_rel_tv">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- 院校介绍fragment  费用、生源、专业等 tv 统一样式-->
+    <style name="about_school_fragment_fszx_tv">
+        <item name="android:textColor">@color/tv_about_school_name</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+
+    <!-- 院校介绍fragment  时间表各个选项 tv 统一样式-->
+    <style name="about_school_fragment_time_table_tv">
+        <item name="android:textColor">@color/tv_about_school_list_time</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxEms">2</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 统一样式-->
+    <style name="about_school_fragment_time_table_content1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="about_school_fragment_time_table_content2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 年月日时间 统一样式-->
+    <style name="about_school_fragment_time_table_content_tv1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/tv_about_school_list_item</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 具体时间统一样式-->
+    <style name="about_school_fragment_time_table_content_tv2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/tv_about_school_list_time</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <!-- 登录页面 每一项的LinearLayout 统一样式-->
+    <style name="login_activity_edit_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+    </style>
+    <!-- 登录页面 每一项的LinearLayout 之间的view横线 统一样式-->
+    <style name="login_activity_edit_linear_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:background">@color/line_login_view_edit</item>
+    </style>
+
+
+    <!-- 注册页面 每一项的LinearLayout 统一样式-->
+    <style name="sign_activity_edit_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- 注册页面 tag（手机号、密码、验证码、昵称）统一样式-->
+    <style name="sign_activity_edit_tag">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/tv_sign_exit_tag</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!-- 注册页面 edit 输入内容（手机号、密码、验证码、昵称）统一样式-->
+    <style name="sign_activity_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/tv_sign_exit_tag</item>
+        <item name="android:textColorHint">@color/tv_sign_exit_hint</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!-- 注册页面用户协议 统一样式-->
+    <style name="sign_activity_user_protocol">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 注册页面 确认按钮 统一样式-->
+    <style name="sign_activity_queren">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_selector_sign_queren_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_title_all"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:background="@color/white"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="219dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:layout_marginTop="18dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rb_sysmessage_fragment_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="活动提醒"
+                android:textColor="@drawable/rb_sysmessage_fragment_tv"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rb_sysmessage_fragment_bg2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="咨询提问"
+                android:textColor="@drawable/rb_sysmessage_fragment_tv"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <com.xszj.mba.view.NoTouchViewPager
+        android:id="@+id/message_tab_pager"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.xszj.mba.view.NoTouchViewPager>
+
+</LinearLayout>

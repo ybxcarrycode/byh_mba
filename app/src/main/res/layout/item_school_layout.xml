@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <!-- 左边部分 学校logo -->
+
+    <ImageView
+        android:id="@+id/iv_sc_logo"
+        android:layout_width="@dimen/sc_logo_w"
+        android:layout_height="@dimen/sc_logo_h"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_we_write" />
+    <!-- 右边部分 -->
+
+    <LinearLayout
+        android:id="@+id/ll_sc_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <!-- 中间上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_sc_middle_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 右边上半部分 -->
+
+            <TextView
+                android:id="@+id/tv_paming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_school_rank_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_sc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text="清华大学"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <!-- 中间中间部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_sc_middle_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="文科平均分："
+                android:textColor="@color/inputtxt_color"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <TextView
+                android:id="@+id/tv_sc_middle_mkx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_007aff"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:singleLine="true"
+                android:text="理科平均分："
+                android:textColor="@color/inputtxt_color"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <TextView
+                android:id="@+id/tv_sc_middle_aqx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_color_007aff"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.xszj.mba.view.widget.TagListView xmlns:f="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tagview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dip"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:paddingTop="4.0dip"
+            f:horizontalSpacing="8dp"
+            f:orientation="horizontal"
+            f:verticalSpacing="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

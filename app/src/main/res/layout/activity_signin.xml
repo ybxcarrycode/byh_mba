@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sign_activity"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="@dimen/dimen_45dp">
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_back_blue"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
+            android:text="先逛逛"
+            android:textColor="@color/tv_login_back_txt"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="@dimen/edt_text_size"
+            android:textColor="@color/c333333"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_sign_top_welcome" />
+
+    <LinearLayout
+        style="@style/sign_activity_edit_linear"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            style="@style/sign_activity_edit_tag"
+            android:text="手机号" />
+
+        <EditText
+            android:id="@+id/edt_login_num"
+            style="@style/sign_activity_edit"
+            android:hint="请输入手机号"
+            android:inputType="number|phone" />
+
+        <Button
+            android:id="@+id/btn_getsms"
+            android:layout_width="95dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sel_login_getsms_btn_bg"
+            android:gravity="center"
+            android:text="@string/str_btn_getOtp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/sign_activity_edit_linear">
+
+        <TextView
+            style="@style/sign_activity_edit_tag"
+            android:text="验证码" />
+
+        <EditText
+            android:id="@+id/edt_login_sms"
+            style="@style/sign_activity_edit"
+            android:hint="请输入收到的验证码"
+            android:inputType="number" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/sign_activity_edit_linear">
+
+        <TextView
+            style="@style/sign_activity_edit_tag"
+            android:text="昵   称" />
+
+        <EditText
+            android:id="@+id/edt_login_name"
+            style="@style/sign_activity_edit"
+            android:hint="请输入昵称" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/sign_activity_edit_linear">
+
+        <TextView
+            style="@style/sign_activity_edit_tag"
+            android:text="密   码" />
+
+        <EditText
+            android:id="@+id/edt_login_pass"
+            style="@style/sign_activity_edit"
+            android:inputType="textPassword"
+            android:hint="请输入密码（6-12位数字字母组合）" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/sign_activity_edit_linear">
+
+        <TextView
+            style="@style/sign_activity_edit_tag"
+            android:text="邀请码" />
+
+        <EditText
+            android:id="@+id/edt_login_req"
+            style="@style/sign_activity_edit"
+            android:inputType="phone|number"
+            android:hint="请输入收到的邀请码（选填）" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_queren"
+        style="@style/sign_activity_queren"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:text="完成" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp">
+
+        <TextView
+            style="@style/sign_activity_user_protocol"
+            android:text="阅读并同意"
+            android:textColor="@color/tv_sign_text_nolight" />
+
+        <TextView
+            android:id="@+id/tv_user_protocol"
+            style="@style/sign_activity_user_protocol"
+            android:text="用户使用协议"
+            android:textColor="@color/tv_sign_text_light" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

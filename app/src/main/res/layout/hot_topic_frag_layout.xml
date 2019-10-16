@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.xszj.mba.view.NormalEmptyView
+        android:id="@+id/fmobile_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.xszj.mba.view.PullToRefreshView
+        android:id="@+id/ptr_bbs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_bbs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" >
+        </ListView>
+    </com.xszj.mba.view.PullToRefreshView>
+
+</LinearLayout>

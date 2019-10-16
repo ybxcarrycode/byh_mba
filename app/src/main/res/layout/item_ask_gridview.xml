@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/a_0"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp" />
+
+
+    <ImageView
+        android:id="@+id/delete_but"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:src="@mipmap/icon_submit_delete"/>
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_all"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:background="@color/bg_title_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="160dp"
+            android:layout_height="27dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rb_top_fragment_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="全部"
+                android:textColor="@drawable/rb_kaoquan_fragment_tv" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rb_all_fragment_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="热门"
+                android:textColor="@drawable/rb_kaoquan_fragment_tv" />
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+
+    <com.xszj.mba.view.NoTouchViewPager
+        android:id="@+id/message_tab_pager"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.xszj.mba.view.NoTouchViewPager>
+
+</LinearLayout>

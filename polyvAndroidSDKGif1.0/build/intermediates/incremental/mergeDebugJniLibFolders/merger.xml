@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\mba\mba\polyvAndroidSDKGif1.0\src\main\jniLibs"><file name="armeabi/libpl_droidsonroids_gif.so" path="E:\mba\mba\polyvAndroidSDKGif1.0\src\main\jniLibs\armeabi\libpl_droidsonroids_gif.so"/><file name="armeabi/libpl_droidsonroids_gif_surface.so" path="E:\mba\mba\polyvAndroidSDKGif1.0\src\main\jniLibs\armeabi\libpl_droidsonroids_gif_surface.so"/></source></dataSet><dataSet config="debug"><source path="E:\mba\mba\polyvAndroidSDKGif1.0\src\debug\jniLibs"/></dataSet></merger>

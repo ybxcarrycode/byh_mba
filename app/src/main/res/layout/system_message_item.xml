@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.xszj.mba.utils.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:src="@drawable/tu_zhanweitu_houzi_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvc_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="清华大学宣讲会"
+                android:textColor="@color/home_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_message_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/sysmessage_fragment_item_bg_black"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="线下活动"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvc_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="13:30-15:00"
+                android:textColor="@color/tv_find_nearterm_name_item"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/tv_message_read_type"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_toLeftOf="@+id/imt_delete"
+                android:drawableLeft="@mipmap/icon_message_no"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="未读"
+                android:textColor="#979797"
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/imt_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@null"
+                android:src="@mipmap/icon_delete_press" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageView"
+        android:background="@color/line_find" />
+
+</RelativeLayout>

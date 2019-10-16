@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AA959B9F"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/question_guide_alert"
+        />
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/question_guide_left"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左右滑动即可切换题目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:src="@mipmap/question_guide_right"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/question_quide_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="22dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:paddingLeft="22dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/btn_transparent_stroke_shape"
+        android:text="知道啦"
+        />
+
+
+</RelativeLayout>

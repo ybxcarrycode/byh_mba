@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_answer"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/question_answer_mark"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/tv_question_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:text="逻辑思维判断"
+            android:textColor="#959B9F"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/tv_question_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="2/24"
+            android:layout_centerVertical="true"
+            android:textColor="#959B9F"
+            android:textSize="@dimen/text_size_13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_login_view_questoion"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/rl"
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="#646A6D"
+        android:layout_margin="10dp"
+        android:text="到付款感觉就看到发过来给框架地方；攻略开房间广阔的浪费就给你个地方来看光禄大夫结果独立分开过" />
+
+</RelativeLayout>

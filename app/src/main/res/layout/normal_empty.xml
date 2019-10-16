@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/pb_empty_loading"
+                style="@style/CustomProgressStyle100dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:indeterminateDrawable="@null" />
+
+            <ProgressBar
+                android:id="@+id/pb_empty_fail"
+                style="@style/CustomProgressStyle100dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:indeterminateDrawable="@drawable/loading_error_icon" />
+
+            <ImageView
+                android:id="@+id/iv_empty_nocontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loading_empty_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_empty_text"
+            style="@style/EmptyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test" />
+    </LinearLayout>
+
+</LinearLayout>

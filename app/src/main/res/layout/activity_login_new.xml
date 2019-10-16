@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login_activity"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@mipmap/icon_back_blue"
+        android:drawablePadding="8dp"
+        android:padding="10dp"
+        android:text="先逛逛"
+        android:textColor="@color/tv_login_back_txt"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:src="@mipmap/icon_login_logo" />
+
+
+    <LinearLayout style="@style/login_activity_edit_linear">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/icon_login_phone" />
+
+        <EditText
+            android:id="@+id/edt_login_num"
+            style="@style/sign_activity_edit"
+            android:hint="请输入手机号"
+            android:inputType="number|phone" />
+
+    </LinearLayout>
+
+    <View style="@style/login_activity_edit_linear_line" />
+
+    <LinearLayout style="@style/login_activity_edit_linear">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_login_lock" />
+
+        <EditText
+            android:id="@+id/edt_login_pass"
+            style="@style/sign_activity_edit"
+            android:background="@null"
+            android:hint="输入密码"
+            android:inputType="textPassword" />
+
+
+        <ImageView
+            android:id="@+id/enterpassword_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_register_password" />
+
+    </LinearLayout>
+
+    <View style="@style/login_activity_edit_linear_line" />
+
+    <Button
+        android:id="@+id/btn_queren"
+        style="@style/sign_activity_queren"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:text="登录" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="13dp"
+            android:layout_centerInParent="true"
+            android:background="@color/line_login_view_edit" />
+
+        <TextView
+            android:id="@+id/tv_forget_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/view"
+            android:padding="10dp"
+            android:text="忘记密码"
+            android:textColor="@color/text_color_666666"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_go_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/view"
+            android:padding="10dp"
+            android:text="立即注册"
+            android:textColor="@color/tv_sign_text_light"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        style="@style/login_activity_edit_linear"
+        android:layout_marginTop="5dp">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:background="@color/line_login_view_edit" />
+
+        <TextView
+            android:id="@+id/tv_other_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="您还可以选择如下方式登录"
+            android:textColor="@color/tv_login_back_txt"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:background="@color/line_login_view_edit" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_login_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_login_qq" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/img_login_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_login_weixin" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

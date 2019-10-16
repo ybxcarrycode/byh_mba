@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_login_view_questoion" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view"
+        android:layout_margin="@dimen/dimen_10dp">
+
+        <TextView
+            android:id="@+id/tv_answer_sel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_black_stroke_shape"
+            android:gravity="center"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:lineSpacingExtra="2dp"
+            android:layout_gravity="center_vertical"
+            android:minLines="1"
+            android:text=""
+            android:textColor="#646A6D"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

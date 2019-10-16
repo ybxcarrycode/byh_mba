@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/xinwen_rb1"
+            style="@style/radio_style"
+            android:checked="true"
+            android:text="近期活动" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <RadioButton
+            android:id="@+id/xinwen_rb2"
+            style="@style/radio_style"
+            android:checked="false"
+            android:text="申请材料" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <RadioButton
+            android:id="@+id/xinwen_rb3"
+            style="@style/radio_style"
+            android:checked="false"
+            android:text="面试攻略" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <RadioButton
+            android:id="@+id/xinwen_rb4"
+            style="@style/radio_style"
+            android:checked="false"
+            android:text="笔试攻略" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_find" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

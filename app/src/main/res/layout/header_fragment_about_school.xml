@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <com.xszj.mba.utils.CircleImageView
+                android:id="@+id/img_school"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tv_school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/img_school"
+                android:singleLine="true"
+                android:textColor="@color/tv_about_school_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_people_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_toRightOf="@id/img_school"
+                android:singleLine="true"
+                android:textColor="@color/tv_about_school_name"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_find" />
+
+        <TextView
+            android:id="@+id/tv_study_costs"
+            style="@style/about_school_fragment_fszx_tv" />
+
+        <TextView
+            android:id="@+id/tv_source_of_students"
+            style="@style/about_school_fragment_fszx_tv" />
+
+        <TextView
+            android:id="@+id/tv_major_field"
+            style="@style/about_school_fragment_fszx_tv" />
+
+        <TextView
+            android:id="@+id/tv_item_classification"
+            style="@style/about_school_fragment_fszx_tv" />
+
+        <TextView
+            android:id="@+id/tv_have_interview"
+            style="@style/about_school_fragment_fszx_tv" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/bg_about_school_list_item"
+            android:gravity="center"
+            android:text="—— 报考时间表 ——"
+            android:textColor="@color/tv_about_school_list_time"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/about_school_fragment_time_table_tv"
+                android:text="面试批次" />
+
+            <TextView
+                style="@style/about_school_fragment_time_table_tv"
+                android:text="在线提交\n截止时间" />
+
+            <TextView
+                style="@style/about_school_fragment_time_table_tv"
+                android:text="面试时间" />
+
+            <TextView
+                style="@style/about_school_fragment_time_table_tv"
+                android:text="面试结果\n公布时间" />
+
+            <TextView
+                style="@style/about_school_fragment_time_table_tv"
+                android:text="面试地点" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_timetable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@color/black" />
+    </LinearLayout>
+
+</ScrollView>

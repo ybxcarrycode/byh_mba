@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_180dp">
+
+                <ImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_180dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tu_zhanweitu_houzi_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#33333333">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:src="@drawable/icon_back_arrow_normal"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:gravity="center_vertical"
+                    android:background="#33333333"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:id="@+id/tv_tea_name"
+                        style="@style/stt_detail_state_rel_tv"
+                        android:textSize="24sp"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:background="@color/black"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_tea_type"
+                        style="@style/stt_detail_state_rel_tv"
+                        android:layout_toLeftOf="@id/tv_tea_name"
+                        android:textSize="13sp"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_about_teach"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:lineSpacingExtra="6dp"
+                android:text=""
+                android:textColor="@color/c333333"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageView
+                android:id="@+id/home_openclass_open"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/home_open_down"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f5f5f5"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_35dp"
+                android:gravity="center"
+                android:text="-- 学员评价 --"
+                android:textColor="@color/action_bar_tittle_color_555555"
+                android:textSize="@dimen/dimen_20sp"
+                android:id="@+id/textView2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"
+                />
+
+            <com.xszj.mba.view.NoScrollListView
+                android:id="@+id/teacher_detail_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/transparent"
+                android:divider="@null"
+                android:scrollbars="none"
+                >
+
+            </com.xszj.mba.view.NoScrollListView>
+
+            <TextView
+                android:id="@+id/tv_more_comment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="- 查看121条评价 -"
+                android:textColor="#ff935a"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f5f5f5"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/class_teacher_bottom_follow"/>
+
+</LinearLayout>

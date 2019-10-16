@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/global_dialog_content_text"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/global_top_padding"
+            android:layout_marginBottom="@dimen/global_bottom_padding" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/dialog_line_color"
+            android:layout_marginBottom="@dimen/global_bottom_double_padding" />
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:id="@+id/messageLl"
+		    android:layout_marginBottom="@dimen/global_bottom_double_padding">
+		    <TextView
+	            android:id="@+id/tv_dialog_message"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="@dimen/global_left_padding"
+	            android:gravity="center_horizontal"
+	            android:textSize="16sp"
+	            android:visibility="gone"
+	            android:textColor="@color/black"
+	            android:layout_marginBottom="@dimen/global_double_padding" />
+		    
+		    <TextView
+	            android:id="@+id/tv_dialog_content"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="@dimen/global_left_padding"
+	            android:layout_marginRight="@dimen/global_right_padding"
+	            android:gravity="center_horizontal"
+	            android:textSize="18sp"
+	            android:textColor="@color/black"
+	            android:layout_marginBottom="@dimen/global_double_padding" />
+			<CheckBox android:id="@+id/tv_dialog_check"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal"
+			    android:button="@drawable/sel_cb_dialog"
+			    android:text="不在提醒"
+			    android:textColor="@color/black"
+			    android:textStyle="bold"
+			    android:paddingLeft="23dp"
+			    android:visibility="gone"/>
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/dialog_bt_layout"
+		    android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/global_padding"
+            android:layout_marginBottom="@dimen/global_padding"
+            android:layout_marginRight="@dimen/global_padding">
+
+		    <Button
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@drawable/color_dialog_btn"
+                android:textSize="18sp" />
+
+            <!-- 分割线 -->
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="4dip"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/btn_dialog_ok"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@drawable/color_dialog_btn"
+                android:textSize="18sp" />
+		    
+		    
+		</LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

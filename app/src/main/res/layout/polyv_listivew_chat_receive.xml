@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_13_4dp"
+        android:background="@drawable/polyv_chat_time_block"
+        android:text="2016/9/11 10:10:18"
+        android:textColor="@color/top_right_text_color_black"
+        android:textSize="@dimen/dimen_12_7dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_13_3dp">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dimen_36_6dp"
+            android:layout_height="@dimen/dimen_36_6dp"
+            android:layout_marginLeft="@dimen/dimen_13_3dp"
+            android:layout_marginRight="@dimen/dimen_6dp"
+            android:src="@drawable/polyv_avatar_def" />
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_13_3dp"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="助教 小浩浩"
+                android:textColor="@color/top_right_text_color_black"
+                android:textSize="12.6sp" />
+
+            <pl.droidsonroids.gif.GifSpanTextView
+                android:id="@+id/tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/dimen_13_3dp"
+                android:layout_marginTop="@dimen/dimen_2_66dp"
+                android:background="@drawable/polyv_chatfrom_bg_normal"
+                android:gravity="center_vertical"
+                android:maxWidth="@dimen/dimen_280dp"
+                android:minWidth="@dimen/dimen_50dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:paddingLeft="@dimen/dimen_18dp"
+                android:paddingRight="@dimen/dimen_8dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:text="这是一条很长的信息这是一条很长的信息这是一条很长的信息这是一条很长的信息这是一条很长的信息这是一条很长的信息这是一条很长的信息这是一条很长的信息"
+                android:textColor="@color/center_view_color_blue"
+                android:textSize="@dimen/dimen_16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

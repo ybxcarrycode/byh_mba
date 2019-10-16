@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_all">
+
+    <RelativeLayout
+        android:id="@+id/reltive_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_all">
+
+        <ImageButton
+            android:id="@+id/main_top_left"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="back"
+            android:src="@mipmap/icon_evalute_quit" />
+
+        <TextView
+            android:id="@+id/main_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/main_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_user_freeback_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@null"
+            android:gravity="top"
+            android:padding="10dp"
+            android:hint="输入你想说的吧"
+            android:maxLength="202"
+            android:textColor="#989898"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_find"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

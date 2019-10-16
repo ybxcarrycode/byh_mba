@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tu_zhanweitu_houzi_gray"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2016考研大纲"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="21dp" />
+
+
+    <TextView
+        android:id="@+id/tv_hour_peo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:textSize="14sp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+
+        />
+
+
+
+</RelativeLayout>

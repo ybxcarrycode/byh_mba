@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_title_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <com.xszj.mba.view.NormalEmptyView
+        android:id="@+id/fmobile_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:visibility="gone" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrecyclerview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/bg_title_all">
+
+        <com.xszj.mba.view.PrototypeImageView
+            android:id="@+id/image_head"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/tu_zhanweitu_houzi_gray" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_no_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_toRightOf="@+id/image_head"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:id="@+id/me_lijidenglu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你还没有登录博雅汇MBA"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:layout_below="@+id/me_lijidenglu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:focusable="true"
+                android:textSize="@dimen/dimen_14sp"
+                android:background="@drawable/me_fragment_login_bg"
+                android:text="登陆"
+                />
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_toRightOf="@+id/btn_login"
+                android:layout_below="@+id/me_lijidenglu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:textColor="@color/common_botton_bar_pressed"
+                android:focusable="false"
+                android:textSize="@dimen/dimen_14sp"
+                android:background="@drawable/me_fragment_login_bg"
+                android:text="注册"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/yes_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/image_head"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/image_head"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:text="我看到"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_me_name"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_vip_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_type"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_me_school"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_me_name"
+                android:layout_marginTop="10dp"
+                android:text="北京大学"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tv_perfect_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="7dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableRight="@mipmap/icon_more_white"
+                android:gravity="right"
+                android:text="       "
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f5f5f5" />
+
+</LinearLayout>

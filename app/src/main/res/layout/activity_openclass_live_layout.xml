@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xszj.mba.view.GlobalTitleView
+        android:id="@+id/globalTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <com.easefun.polyvsdk.demo.VideoViewContainer
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#000000">
+
+        <com.easefun.polyvsdk.ijk.IjkVideoView
+            android:id="@+id/videoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            ></com.easefun.polyvsdk.ijk.IjkVideoView>
+
+        <ProgressBar
+            android:id="@+id/loadingprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+    </com.easefun.polyvsdk.demo.VideoViewContainer>
+
+    <com.xszj.mba.view.NormalEmptyView
+        android:id="@+id/fmobile_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.xszj.mba.view.SimpleViewPagerIndicator
+        android:id="@id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/id_stickynavlayout_topview"
+        android:background="#ffffffff">
+
+    </com.xszj.mba.view.SimpleViewPagerIndicator>
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/id_stickynavlayout_indicator"
+        android:background="@color/c9c9c9" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <com.xszj.mba.view.NoTouchViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line2"
+            android:background="@color/white" />
+
+
+        <RelativeLayout
+            android:id="@+id/rel_hudong_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/listview_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:divider="@null"></ListView>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#fcfcfc"
+                android:minHeight="37dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/editview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_black_stroke_shape"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:inputType="textMultiLine"
+                    android:maxLength="1001"
+                    android:maxLines="26"
+                    android:minHeight="36dp"
+                    android:padding="6dp"
+                    android:textColor="#b2b2b2"
+                    android:textColorHint="#b2b2b2"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/chat_send_btn_selector"
+                    android:gravity="center"
+                    android:text="发送"
+                    android:textColor="#151515"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/class_teacher_bottom_follow"/>
+
+</LinearLayout>

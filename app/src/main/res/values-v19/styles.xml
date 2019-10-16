@@ -1,0 +1,479 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
+        <item name="colorAccent">@color/color_green_89fbff</item>
+        <item name="actionBarSize">@dimen/action_bar_height</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="ProgressHUD" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="PlayerTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:itemTextAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTheme</item>
+    </style>
+
+    <!-- navigation style -->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <!-- toolbar的弹出菜单 -->
+    <style name="ActionMenuTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/color_black_333333</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 登录主题 -->
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/color_blue_3a9efb</item>
+        <item name="colorPrimaryDark">@color/color_blue_3a9efb</item>
+        <item name="colorAccent">@color/color_blue_0888ff</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowBackground">@color/color_blue_3a9efb</item>
+    </style>
+
+    <!-- 全屏主题 -->
+    <style name="FullScreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 欢迎界面主题 -->
+    <style name="WelcomeEntranceActionBarTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <!-- 搜索界面主题 -->
+    <style name="global_search_bg" parent="@style/AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/global_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="CustomProgressStyle100dip" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:minWidth">100dip</item>
+        <item name="android:maxWidth">100dip</item>
+        <item name="android:minHeight">100dip</item>
+        <item name="android:maxHeight">100dip</item>
+    </style>
+
+    <style name="xs_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="EmptyTextStyle">
+        <item name="android:textColor">@color/empty_txt_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 标题 白色 18sp 字体 -->
+    <style name="title_tv_white_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 标题 白色 20sp 字体 -->
+    <style name="title_tv_white_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- 发现模块导航栏样式 -->
+    <style name="radio_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/content_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/rb_find_sel_item</item>
+    </style>
+
+    <!-- 寻师详情页 状态栏横条 tv 统一样式-->
+    <style name="stt_detail_state_rel_tv">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- 院校介绍fragment  费用、生源、专业等 tv 统一样式-->
+    <style name="about_school_fragment_fszx_tv">
+        <item name="android:textColor">@color/tv_about_school_name</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+
+    <!-- 院校介绍fragment  时间表各个选项 tv 统一样式-->
+    <style name="about_school_fragment_time_table_tv">
+        <item name="android:textColor">@color/tv_about_school_list_time</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxEms">2</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 统一样式-->
+    <style name="about_school_fragment_time_table_content1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="about_school_fragment_time_table_content2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 年月日时间 统一样式-->
+    <style name="about_school_fragment_time_table_content_tv1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/tv_about_school_list_item</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 院校介绍fragment  时间表各个选项 填写内容 具体时间统一样式-->
+    <style name="about_school_fragment_time_table_content_tv2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/tv_about_school_list_time</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <!-- 登录页面 每一项的LinearLayout 统一样式-->
+    <style name="login_activity_edit_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+    </style>
+    <!-- 登录页面 每一项的LinearLayout 之间的view横线 统一样式-->
+    <style name="login_activity_edit_linear_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:background">@color/line_login_view_edit</item>
+    </style>
+
+
+    <!-- 注册页面 每一项的LinearLayout 统一样式-->
+    <style name="sign_activity_edit_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- 注册页面 tag（手机号、密码、验证码、昵称）统一样式-->
+    <style name="sign_activity_edit_tag">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/tv_sign_exit_tag</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!-- 注册页面 edit 输入内容（手机号、密码、验证码、昵称）统一样式-->
+    <style name="sign_activity_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/tv_sign_exit_tag</item>
+        <item name="android:textColorHint">@color/tv_sign_exit_hint</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!-- 注册页面用户协议 统一样式-->
+    <style name="sign_activity_user_protocol">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 注册页面 确认按钮 统一样式-->
+    <style name="sign_activity_queren">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_selector_sign_queren_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+
+    <style name="UmengDefault"  parent="android:Theme.Light.NoTitleBar">
+
+
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+
+        <item name="default_background_color">@color/umeng_comm_default_background_color</item>
+        <item name="umeng_comm_indicator_default">@color/umeng_comm_indicator_default</item>
+        <item name="umeng_comm_indicator_highlight">@color/umeng_comm_text_topic_light_color</item>
+        <item name="umeng_post_feed_button">@drawable/umeng_comm_new_post_btn_style</item>
+        <item name="umeng_feed_tip_text_color">@color/umeng_text_common_default</item>
+        <item name="umeng_feed_button_text_bg">@color/umeng_comm_button_bg</item>
+        <item name="umeng_feed_button_text_color">@color/umeng_comm_white_color</item>
+        <item name="umeng_comm_feed_list_bg">@color/umeng_comm_feed_list_bg</item>
+        <item name="umeng_comm_backbutton_bg">@color/umeng_comm_color_transparent</item>
+        <item name="umeng_comm_backbutton_src">@drawable/umeng_comm_title_back</item>
+        <item name="umeng_comm_red_point">@drawable/umeng_comm_circle_shape</item>
+        <item name="umeng_comm_find_button">@drawable/umeng_comm_find_bt</item>
+        <item name="umeng_comm_divider">@color/umeng_comm_divider</item>
+        <item name="umeng_comm_setting_camera">@drawable/umeng_comm_camera_pressed</item>
+        <item name="umeng_comm_nick_name_color">@color/umeng_comm_text_topic_light_color</item>
+        <item name="umeng_comm_focus_togglebutton">@drawable/umeng_comm_topic_togglebutton</item>
+        <item name="umeng_comm_focus_togglebutton_bg">@drawable/umeng_comm_focus_user_bg</item>
+        <item name="umeng_comm_focus_togglebutton_text">@color/umeng_comm_topic_toogle_color</item>
+        <item name="umeng_comm_active_user_name_textcolor">@color/umeng_comm_color_666666</item>
+        <item name="umeng_comm_active_user_msgcolor">@color/umeng_comm_color_a5</item>
+        <item name="umeng_comm_active_user_card_bg">@color/umeng_comm_white_color</item>
+        <item name="umeng_comm_other_info">@color/umeng_comm_loction_text_color</item>
+        <item name="umeng_comm_search_edittext">@drawable/umeng_community_topic_bg</item>
+        <item name="search_lastes_btn">@color/umeng_comm_aaa</item>
+        <item name="umeng_comm_small_title_color">@color/umeng_comm_color_99</item>
+        <item name="umeng_comm_category_title_color">@color/umeng_text_common_selected</item>
+        <item name="umeng_comm_right_arrow">@drawable/jiantou</item>
+        <item name="umeng_comm_category_edge">@drawable/huatizu</item>
+        <item name="umeng_comm_chat_input_bg">@color/umeng_comm_color_f5</item>
+        <item name="umeng_chat_edit_background">@drawable/umeng_edit_background</item>
+        <item name="umeng_chat_edit_text_color">@color/umeng_comm_color_33</item>
+        <item name="umeng_chat_send_btn_bg">@drawable/umeng_comm_chat_send_selector</item>
+        <item name="umeng_chat_send_btn_text">@color/umeng_comm_white_color</item>
+        <item name="umeng_comm_comment_action_dialog_text">@color/umeng_comm_color_17</item>
+        <item name="umeng_comm_more_radius_top">@drawable/umeng_comm_more_radius_top</item>
+        <item name="umeng_comm_more_radius_middle">@drawable/umeng_comm_radius_bg</item>
+        <item name="umeng_comm_more_radius_bottom">@drawable/umeng_comm_more_radius_bottom</item>
+        <item name="umeng_comm_comment_cancel_text">@color/umeng_comm_color_a5</item>
+        <item name="umeng_comm_comment_send_text">@drawable/umeng_comm_comment_input_send_selector</item>
+        <item name="umeng_comm_comment_edit_text">@color/umeng_comm_color_33</item>
+        <item name="umeng_comm_emoj">@drawable/umeng_comm_emoji</item>
+        <item name="umeng_comm_comment_msg_tv_selector">@drawable/umeng_comm_comment_msg_tv_selector</item>
+        <item name="umeng_comm_reply_comment_bg">@drawable/umeng_comm_reply_comment_bg</item>
+        <item name="umeng_comm_comment_name">@color/umeng_comm_color_c0</item>
+        <item name="umeng_comm_defaul_icon">@drawable/morentuf</item>
+        <item name="umeng_comm_find_user_nologin_text">@color/umeng_comm_color_33</item>
+        <item name="umeng_comm_find_user_login_text">@color/umeng_comm_color_17</item>
+        <item name="umeng_comm_notification_icon">@drawable/umeng_comm_notification</item>
+        <item name="umeng_comm_favortes_icon">@drawable/umeng_comm_favorites_pressed</item>
+        <item name="umeng_comm_firends_icon">@drawable/haoyouquan</item>
+        <item name="umeng_comm_mytopics_icon">@drawable/guanzhuhuati</item>
+        <item name="umeng_comm_mypics_icon">@drawable/wodetuce</item>
+        <item name="umeng_comm_nearby_content_icon">@drawable/umeng_comm_nearby_recommend</item>
+        <item name="umeng_comm_nearby_user_icon">@drawable/umeng_comm_nearby_user</item>
+        <item name="umeng_comm_realtime_icon">@drawable/umeng_comm_realtime_icon</item>
+        <item name="umeng_comm_recommend_user_icon">@drawable/umeng_comm_user_recommend</item>
+        <item name="umeng_comm_recommend_topic_icon">@drawable/umeng_comm_topic_recommend</item>
+        <item name="umeng_comm_default_user_icon">@drawable/umeng_comm_male</item>
+        <item name="umeng_comm_user_add_follow_btn">@drawable/jiaguanzhu</item>
+        <item name="umeng_comm_user_cancel_follow_btn">@drawable/yiguanzhu</item>
+        <item name="umeng_comm_user_inter_follow_btn">@drawable/xianghu</item>
+        <item name="umeng_comm_hot_choose_btn_bg">@drawable/umeng_comm_hot_button_selector</item>
+        <item name="umeng_comm_hot_choose_btn_text">@drawable/umeng_comm_button_hot_btn_text_selector</item>
+        <item name="umeng_comm_add_pic_btn">@drawable/umeng_comm_add_image</item>
+        <item name="umeng_comm_del_pic_btn">@drawable/umeng_comm_image_delete</item>
+        <item name="umeng_comm_album_text">@color/umeng_comm_black_color</item>
+        <item name="umeng_comm_album_choose_btn">@drawable/umeng_comm_image_pick</item>
+        <item name="umeng_comm_album_choose_check">@drawable/umeng_comm_checkbox_style</item>
+        <item name="umeng_comm_album_percent_btn">@drawable/umeng_comm_blue_button_bg</item>
+        <item name="umeng_comm_album_pre_btn">@drawable/umeng_comm_gray_bg</item>
+        <item name="umeng_comm_save_btn">@drawable/umeng_comm_image_save_bg</item>
+        <item name="umeng_comm_image_browser_bg">@color/umeng_comm_image_browser_bg</item>
+        <item name="umeng_comm_current_pos_bg">@drawable/umeng_comm_current_pos_bg</item>
+        <item name="umeng_switch_leftbutton_bg">@drawable/umeng_switch_leftbutton_bg</item>
+        <item name="umeng_switch_centerbutton_bg">@drawable/umeng_switch_centerbutton_bg</item>
+        <item name="umeng_switch_rightbutton_bg">@drawable/umeng_switch_rightbutton_bg</item>
+        <item name="umeng_switch_textcolor">@color/umeng_switch_textcolor</item>
+        <item name="umeng_comm_chat_other_user_bg">@drawable/duihuakuang1</item>
+        <item name="umeng_comm_chat_user_bg">@drawable/duihuakuang2</item>
+        <item name="umeng_comm_action_dialog_top_bg">@drawable/umeng_comm_more_radius_top</item>
+        <item name="umeng_comm_action_dialog_middle_bg">@drawable/umeng_comm_more_radius_none</item>
+        <item name="umeng_comm_action_dialog_radius_bottom_bg">@drawable/umeng_comm_more_radius_bottom</item>
+        <item name="umeng_comm_action_dialog_bottom_bg">@drawable/umeng_comm_radius_bg</item>
+        <item name="umeng_comm_location_gray_icon">@drawable/umeng_location_small_icon</item>
+        <item name="umeng_comm_reply_icon">@drawable/umeng_comm_reply</item>
+        <item name="umeng_comm_reply_feed_img">@color/radio_button_selected_color</item>
+        <item name="umeng_comm_reply_feed_username">@color/umeng_comm_color_56</item>
+        <item name="umeng_comm_reply_feed_content">@color/umeng_comm_color_7d</item>
+        <item name="umeng_comm_search_icon">@drawable/umeng_comm_search_icon</item>
+        <item name="umeng_comm_search_edge">@drawable/umeng_comm_rounded_corner_backgroud</item>
+        <item name="umeng_comm_search_text">@color/umeng_comm_color_c5</item>
+        <item name="umeng_comm_logout_bg">@drawable/umeng_comm_logout_bg</item>
+        <item name="umeng_comm_logout_text">@color/umeng_comm_feed_detail_pressed_yellow</item>
+        <item name="umeng_comm_topic_toast_bg">@drawable/umeng_comm_toastbg</item>
+        <item name="umeng_comm_topic_toast_icon">@drawable/tishib</item>
+        <item name="umeng_comm_gray">@color/umeng_background_grey</item>
+        <item name="umeng_comm_userinfo_bg">@color/umeng_comm_comment_item_bg</item>
+        <item name="umeng_comm_more_icon">@drawable/umeng_comm_feed_detail_more</item>
+        <item name="umeng_comm_register_bg">@color/umeng_comm_e8</item>
+        <item name="umeng_comm_register_divide">@color/umeng_comm_f6f7f9</item>
+        <item name="umeng_comm_register_finish">@drawable/umeng_comm_login_btnbg</item>
+        <item name="umeng_comm_register_hidepassword">@drawable/umeng_comm_hidepassword</item>
+        <item name="umeng_comm_register_showpassword">@drawable/umeng_com_showpassword</item>
+        <item name="umeng_comm_register_close">@drawable/umeng_comm_login_close</item>
+        <item name="umeng_comm_login_user">@drawable/umeng_comm_user_p</item>
+        <item name="umeng_comm_login_lock">@drawable/umeng_comm_lock</item>
+        <item name="umeng_comm_login_forget">@color/umeng_comm_469ef8</item>
+        <item name="umeng_comm_login_btnbg">@drawable/umeng_comm_login_btnbg</item>
+        <item name="umeng_comm_register_btnbg">@drawable/umeng_comm_register_btnbg</item>
+        <item name="umeng_comm_setting_icon">@drawable/umeng_comm_setting_bt</item>
+        <item name="umeng_comm_favour_icon">@drawable/umeng_comm_favourite_button</item>
+        <item name="umeng_comm_xie_icon">@drawable/xie</item>
+        <item name="umeng_comm_chat_icon">@drawable/umeng_comm_chat_btn</item>
+        <item name="umeng_comm_male_icon">@drawable/umeng_comm_user_info_male</item>
+        <item name="umeng_comm_female_icon">@drawable/umeng_comm_user_info_female</item>
+        <item name="umeng_comm_xiangce_icon">@drawable/xiangce</item>
+        <item name="umeng_comm_huati_icon">@drawable/huati</item>
+        <item name="umeng_comm_xunzhang_icon">@drawable/jifen</item>
+        <item name="umeng_comm_userinfo_icon_color">@color/umeng_comm_userinfo_color</item>
+        <item name="umeng_comm_detail_more">@drawable/umeng_comm_share</item>
+        <item name="umeng_comm_detail_favour">@drawable/umeng_comm_feed_detail_favorite_n</item>
+        <item name="umeng_comm_detail_location">@drawable/umeng_community_location</item>
+        <item name="umeng_comm_detail_location_text">@color/umeng_comm_loction_text_color</item>
+        <item name="umeng_comm_detail_forward_bg">@drawable/umeng_comm_forward_bg</item>
+        <item name="umeng_comm_detail_discuss_like">@drawable/umeng_comm_like_bt</item>
+        <item name="umeng_comm_detail_discuss_like_btn">@drawable/umeng_commm_feeddetail_like_selector</item>
+        <item name="umeng_comm_detail_discuss_forward">@drawable/umeng_comm_forward_bt</item>
+        <item name="umeng_comm_detail_discuss_comment">@drawable/umeng_comm_comment</item>
+        <item name="umeng_comm_detail_discuss_comment_btn">@drawable/umeng_comm_feed_detail_comment_selector</item>
+        <item name="umeng_comm_detail_discuss_favourite">@drawable/umeng_comm_feed_detail_favorite_selector</item>
+        <item name="umeng_comm_detail_discuss_ding">@drawable/umeng_comm_feed_item_top</item>
+        <item name="umeng_comm_detail_discuss_jing">@drawable/umeng_comm_feed_item_essential</item>
+        <item name="umeng_comm_comment_input_bg">@color/umeng_comm_comment_input_bg</item>
+        <item name="umeng_comm_detail_blue_selector">@drawable/umeng_comm_feed_detail_blue_selector</item>
+        <item name="umeng_comm_detail_blue_tv_selector">@drawable/umeng_comm_feed_detail_tv_blue_selector</item>
+        <item name="umeng_comm_detail_reply_bg">@drawable/umeng_comm_feed_detail_blue_n</item>
+        <item name="umeng_comm_detail_reply_icon">@drawable/umeng_comm_feed_detail_reply_comment</item>
+        <item name="umeng_comm_detail_yellow_selector">@drawable/umeng_comm_feed_detail_yellow_selector</item>
+        <item name="umeng_comm_detail_yellow_tv_selector">@drawable/umeng_comm_feed_detail_tv_yellow_selector</item>
+        <item name="umeng_comm_discuss_announce">@drawable/umeng_comm_discuss_announce</item>
+        <item name="umeng_comm_feed_item_like">@drawable/umeng_comm_feed_item_like</item>
+        <item name="umeng_comm_feed_item_comment">@drawable/umeng_comm_feed_item_comment</item>
+        <item name="umeng_comm_default_topic_icon">@drawable/umeng_comm_topic_icon</item>
+        <item name="umeng_comm_focus_btn">@drawable/umeng_commm_active_user_togglebutton_bg</item>
+        <item name="umeng_comm_feed_comment_comment">@drawable/umeng_comm_comment_comment_selector</item>
+        <item name="umeng_comm_feed_comment_like">@drawable/umeng_comm_comment_like_selector</item>
+        <item name="umeng_comm_post_cancel_btn">@drawable/umeng_comm_cancel_bt</item>
+        <item name="umeng_comm_post_ok_btn">@drawable/umeng_comm_send_pressed</item>
+        <item name="umeng_comm_select_topic_tv_selector">@drawable/umeng_comm_select_topic_tv_selector</item>
+        <item name="umeng_comm_post_location_btn">@drawable/umeng_comm_select_location_selector</item>
+        <item name="umeng_comm_post_topic_btn">@drawable/umeng_comm_select_topic_selector</item>
+        <item name="umeng_comm_post_tishi_btn">@drawable/tishih</item>
+        <item name="umeng_comm_post_tishi_toast">@drawable/tishib</item>
+        <item name="umeng_comm_post_at_btn">@drawable/umeng_comm_at_friend_bt</item>
+        <item name="umeng_comm_post_emoj_btn">@drawable/umeng_comm_emoji_btn_selector</item>
+        <item name="umeng_comm_post_bar_color">@color/umeng_comm_color_f0</item>
+        <item name="umeng_comm_radio_button">@drawable/umeng_comm_radio_shape</item>
+        <item name="umeng_comm_search_result_more">@drawable/umeng_comm_like_more_user</item>
+        <item name="umeng_comm_forward_btn">@drawable/zhuangfa</item>
+        <item name="umeng_comm_feed_card_btn">@drawable/feedbuttonbg</item>
+        <item name="umeng_comm_post_feed_btn">@drawable/umeng_comm_topic_bt</item>
+        <item name="umeng_comm_post_topic_tip">@drawable/umeng_comm_add_topic_bg</item>
+        <item name="umeng_comm_search_default_text">@color/umeng_comm_text_default_color</item>
+        <item name="umeng_comm_search_edge_style">@drawable/umeng_comm_search_frame_style</item>
+        <item name="umeng_comm_msg_comment">@drawable/umeng_comm_msg_comment</item>
+        <item name="umeng_comm_msg_like">@drawable/umeng_comm_msg_like</item>
+        <item name="umeng_comm_msg_notice">@drawable/umeng_comm_msg_notice</item>
+        <item name="umeng_comm_msg_chat">@drawable/umeng_comm_msg_chat</item>
+        <item name="umeng_comm_msg_at">@drawable/umeng_comm_msg_like</item>
+        <item name="umeng_comm_emojipoint_normal">@drawable/umeng_comm_emojipoint_normal</item>
+        <item name="umeng_comm_emojipoint_pressed">@drawable/umeng_comm_emojipoint_pressed</item>
+        <item name="umeng_comm_like_more_user_pressed">@drawable/umeng_comm_like_more_user_pressed</item>
+        <item name="umeng_comm_like_more_user_normal">@drawable/umeng_comm_like_more_user_normal</item>
+        <item name="blue_line_for_tv">@drawable/blue_line_for_tv</item>
+        <item name="umeng_comm_image_camera">@drawable/xiangji</item>
+        <item name="umeng_comm_top_announce">@drawable/umeng_comm_top_announce</item>
+        <item name="umeng_comm_announce">@drawable/umeng_comm_announce</item>
+        <item name="umeng_comm_top">@drawable/umeng_comm_top</item>
+        <item name="umeng_comm_weibo_jing">@drawable/jing</item>
+        <item name="umeng_comm_weibo_ding">@drawable/ding</item>
+        <item name="umeng_comm_switch_frame">@drawable/umeng_comm_switch_frame</item>
+        <item name="umeng_comm_selector_switch_state">@drawable/umeng_comm_selector_switch_state</item>
+        <item name="umeng_comm_switch_state_mask">@drawable/umeng_comm_switch_state_mask</item>
+        <item name="umeng_comm_selector_switch_slider">@drawable/umeng_comm_selector_switch_slider</item>
+        <item name="umeng_comm_url_color">@color/umeng_comm_url_color</item>
+        <item name="umeng_comm_clip_image_paint">@color/umeng_comm_clip_image_paint</item>
+        <item name="umeng_comm_topic_tip_bg">@color/umeng_comm_topic_tip_bg</item>
+        <item name="umeng_comm_nearby_location_icon">@drawable/umeng_comm_nearby_loc_icon</item>
+        <item name="umeng_comm_no_content_default_color">@color/umeng_comm_black_color</item>
+    </style>
+
+</resources>
